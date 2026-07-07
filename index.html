@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCB展会英语口语训练 | Electronica Munich 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#1e3a8a;--primary-l:#3b82f6;--accent:#f59e0b;
+  --green:#16a34a;--bg:#f1f5f9;--card:#fff;
+  --text:#1e293b;--muted:#64748b;--border:#e2e8f0;
+  --shadow:0 2px 10px rgba(0,0,0,.08);--r:12px
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+/* HEADER */
+header{background:linear-gradient(135deg,#0f2167,#1e40af,#2563eb);color:#fff;padding:28px 20px;text-align:center;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px}
+.hc{position:relative;z-index:1}
+header h1{font-size:1.75rem;font-weight:800;margin-bottom:6px;letter-spacing:.3px}
+header p{opacity:.85;font-size:.95rem;margin-bottom:8px}
+.badge{display:inline-block;background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:700}
+/* NAV */
+nav{background:#fff;border-bottom:2px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06);overflow-x:auto}
+.nav-tabs{display:flex;min-width:max-content;padding:0 12px}
+.nt{padding:13px 15px;cursor:pointer;border-bottom:3px solid transparent;font-size:.85rem;font-weight:500;color:var(--muted);white-space:nowrap;transition:all .2s;display:flex;align-items:center;gap:5px}
+.nt:hover{color:var(--primary);background:#f0f4ff}
+.nt.active{color:var(--primary);border-bottom-color:var(--primary);font-weight:700}
+/* MAIN */
+main{max-width:980px;margin:0 auto;padding:24px 16px}
+.sec{display:none}.sec.active{display:block}
+/* CARDS */
+.card{background:var(--card);border-radius:var(--r);padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--border)}
+.ct{font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #e0e7ff;display:flex;align-items:center;gap:8px}
+/* VOCAB */
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.vi{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:11px 12px;position:relative;transition:all .2s;cursor:default}
+.vi:hover{border-color:var(--primary-l);box-shadow:0 0 0 2px rgba(59,130,246,.12);transform:translateY(-1px)}
+.ven{font-size:.93rem;font-weight:600;color:var(--text);margin-bottom:3px;padding-right:28px}
+.vph{font-size:.72rem;color:#7c3aed;font-style:italic;margin-bottom:3px}
+.vzh{font-size:.8rem;color:var(--muted)}
+.sb{position:absolute;top:8px;right:8px;background:none;border:none;cursor:pointer;font-size:.95rem;padding:3px 5px;border-radius:4px;transition:background .2s;line-height:1}
+.sb:hover{background:#e0e7ff}
+/* PHRASES */
+.pl{list-style:none}
+.pi{display:flex;align-items:flex-start;gap:10px;padding:11px;border-bottom:1px solid var(--border);transition:background .2s}
+.pi:last-child{border-bottom:none}
+.pi:hover{background:#f8fafc;border-radius:8px}
+.pe{font-weight:500;margin-bottom:3px;line-height:1.55;font-size:.9rem}
+.pz{font-size:.8rem;color:var(--muted)}
+.psb{flex-shrink:0;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:.78rem;color:var(--primary);font-weight:600;transition:all .2s;white-space:nowrap}
+.psb:hover{background:var(--primary);color:#fff}
+/* DIALOGUE */
+.dlg{background:#f8fafc;border-radius:10px;padding:16px}
+.dlg-ctrl{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.btn{padding:7px 15px;border-radius:6px;border:none;cursor:pointer;font-size:.82rem;font-weight:600;transition:all .2s}
+.btn-p{background:var(--primary);color:#fff}.btn-p:hover{background:#1e40af}
+.btn-s{background:#fff;color:var(--primary);border:1px solid #bfdbfe}.btn-s:hover{background:#eff6ff}
+.btn-a{background:var(--accent);color:#fff}.btn-a:hover{background:#d97706}
+.btn-g{background:var(--green);color:#fff}.btn-g:hover{background:#15803d}
+.dl{display:flex;gap:10px;margin-bottom:12px;align-items:flex-start}
+.spk{flex-shrink:0;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:#fff}
+.spk-a{background:var(--primary)}.spk-b{background:var(--green)}
+.dtw{flex:1}
+.den{background:#fff;border-radius:8px;padding:9px 13px;font-size:.88rem;line-height:1.6;box-shadow:0 1px 3px rgba(0,0,0,.06);margin-bottom:3px}
+.dzh{font-size:.78rem;color:var(--muted);padding:0 4px;display:none}
+.dzh.show{display:block}
+/* TIP */
+.tip{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid var(--accent);border-radius:8px;padding:13px 15px;margin-top:14px}
+.tip h4{color:#92400e;font-size:.83rem;margin-bottom:6px;font-weight:700}
+.tip p,.tip li{font-size:.81rem;color:#78350f;line-height:1.65}
+.tip ul{padding-left:16px}
+/* HOME HERO */
+.hero{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border-radius:var(--r);padding:30px;margin-bottom:18px;text-align:center}
+.hero h2{font-size:1.4rem;margin-bottom:10px;font-weight:700}
+.hero p{opacity:.9;line-height:1.7;max-width:580px;margin:0 auto 14px;font-size:.92rem}
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:11px}
+.mc{background:#fff;border-radius:var(--r);padding:18px 14px;text-align:center;cursor:pointer;transition:all .2s;border:2px solid transparent;box-shadow:var(--shadow)}
+.mc:hover{border-color:var(--primary-l);transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.mi{font-size:2.2rem;margin-bottom:7px}
+.men{font-weight:700;color:var(--primary);font-size:.88rem;margin-bottom:3px}
+.mzh{font-size:.78rem;color:var(--muted)}
+/* SECTION HEADER */
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.si{font-size:1.9rem}
+.st h2{font-size:1.25rem;font-weight:700;color:var(--primary)}
+.st p{font-size:.82rem;color:var(--muted);margin-top:2px}
+/* GLOSSARY */
+.gs{width:100%;padding:9px 14px;border:1px solid var(--border);border-radius:8px;font-size:.88rem;margin-bottom:14px;outline:none;transition:border-color .2s}
+.gs:focus{border-color:var(--primary-l);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+table{width:100%;border-collapse:collapse}
+th{background:var(--primary);color:#fff;padding:9px 13px;text-align:left;font-size:.83rem}
+td{padding:9px 13px;border-bottom:1px solid var(--border);font-size:.83rem;vertical-align:top}
+tr:hover td{background:#f0f4ff}
+td:first-child{font-weight:700;color:var(--primary)}
+td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
+/* ROLEPLAY */
+.rp{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:var(--r);padding:18px;margin-top:14px}
+.rp h4{color:#0369a1;font-size:.92rem;margin-bottom:8px;font-weight:700}
+.rp p{font-size:.83rem;color:#0c4a6e;line-height:1.65}
+.tb{display:inline-block;background:#dcfce7;color:var(--green);padding:2px 8px;border-radius:4px;font-size:.73rem;font-weight:700;margin-left:6px}
+@media(max-width:600px){
+  header h1{font-size:1.35rem}
+  .card{padding:15px}
+  .vg{grid-template-columns:1fr 1fr}
+  .mg{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="hc">
+  <h1>🔌 PCB展会英语口语训练</h1>
+  <p>专为印制电路板行业从业者设计 · 备战德国慕尼黑电子展</p>
+  <div class="badge">⚡ Electronica Munich · November 2025</div>
+</div>
+</header>
+
+<nav>
+<div class="nav-tabs">
+  <div class="nt active" onclick="show('home')">🏠 首页</div>
+  <div class="nt" onclick="show('airport')">✈️ 机场</div>
+  <div class="nt" onclick="show('hotel')">🏨 酒店</div>
+  <div class="nt" onclick="show('taxi')">🚕 交通</div>
+  <div class="nt" onclick="show('restaurant')">🍽️ 餐厅</div>
+  <div class="nt" onclick="show('client')">🤝 客户会面</div>
+  <div class="nt" onclick="show('vocab')">📋 技术词汇</div>
+</div>
+</nav>
+
+<main>
+
+<!-- ===================== HOME ===================== -->
+<div id="home" class="sec active">
+  <div class="hero">
+    <h2>Welcome to Your PCB English Training Hub!</h2>
+    <p>专为印制电路板行业从业者打造的英语口语训练平台，帮助您自信应对2025年11月慕尼黑 Electronica 电子展的各类英语口语场景。</p>
+    <button class="btn btn-a" onclick="speak('Welcome to the PCB English Training Hub! Let us help you prepare for Electronica Munich 2025!')">🔊 试听朗读效果</button>
+  </div>
+  <div class="card">
+    <div class="ct">🎯 六大学习模块</div>
+    <div class="mg">
+      <div class="mc" onclick="show('airport')"><div class="mi">✈️</div><div class="men">Airport</div><div class="mzh">机场</div></div>
+      <div class="mc" onclick="show('hotel')"><div class="mi">🏨</div><div class="men">Hotel</div><div class="mzh">酒店</div></div>
+      <div class="mc" onclick="show('taxi')"><div class="mi">🚕</div><div class="men">Transport</div><div class="mzh">交通出行</div></div>
+      <div class="mc" onclick="show('restaurant')"><div class="mi">🍽️</div><div class="men">Restaurant</div><div class="mzh">餐厅点餐</div></div>
+      <div class="mc" onclick="show('client')"><div class="mi">🤝</div><div class="men">PCB Client</div><div class="mzh">客户会面</div></div>
+      <div class="mc" onclick="show('vocab')"><div class="mi">📋</div><div class="men">PCB Vocab</div><div class="mzh">技术词汇</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">📖 使用说明</div>
+    <div style="line-height:1.85;font-size:.9rem">
+      <p>1. 点击上方导航栏进入各场景模块</p>
+      <p>2. 点击词汇卡右上角 🔊 按钮收听标准英语发音</p>
+      <p>3. 点击短语左侧"🔊 听"按钮朗读整句</p>
+      <p>4. 在示范对话中点击 <strong>显示中文</strong> 查看对照翻译</p>
+      <p>5. 点击 <strong>▶ 朗读对话</strong> 按钮收听完整对话</p>
+      <p>6. 与同伴进行角色扮演练习，反复巩固</p>
+    </div>
+    <div class="tip">
+      <h4>💡 备展建议</h4>
+      <ul>
+        <li>每天练习15-20分钟，重点突破 <strong>客户会面</strong> 模块</li>
+        <li>把高频短语打印出来，展会期间随身携带</li>
+        <li>外国客户对非母语英语者非常包容，放松心态最重要</li>
+        <li>遇到听不懂的话，大方说："Could you please speak more slowly?"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== AIRPORT ===================== -->
+<div id="airport" class="sec">
+  <div class="sh"><div class="si">✈️</div><div class="st"><h2>Airport English</h2><p>机场全程英语 · 从值机到抵达慕尼黑</p></div></div>
+  <div class="card">
+    <div class="ct">📚 核心词汇</div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Check-in counter</div><div class="vph">/tʃek ɪn ˈkaʊntər/</div><div class="vzh">值机柜台</div><button class="sb" onclick="speak('Check-in counter')">🔊</button></div>
+      <div class="vi"><div class="ven">Boarding pass</div><div class="vph">/ˈbɔːrdɪŋ pæs/</div><div class="vzh">登机牌</div><button class="sb" onclick="speak('Boarding pass')">🔊</button></div>
+      <div class="vi"><div class="ven">Passport</div><div class="vph">/ˈpæspɔːrt/</div><div class="vzh">护照</div><button class="sb" onclick="speak('Passport')">🔊</button></div>
+      <div class="vi"><div class="ven">Checked baggage</div><div class="vph">/tʃekt ˈbægɪdʒ/</div><div class="vzh">托运行李</div><button class="sb" onclick="speak('Checked baggage')">🔊</button></div>
+      <div class="vi"><div class="ven">Carry-on</div><div class="vph">/ˈkæri ɒn/</div><div class="vzh">随身行李</div><button class="sb" onclick="speak('Carry-on luggage')">🔊</button></div>
+      <div class="vi"><div class="ven">Departure gate</div><div class="vph">/dɪˈpɑːrtʃər ɡeɪt/</div><div class="vzh">登机口</div><button class="sb" onclick="speak('Departure gate')">🔊</button></div>
+      <div class="vi"><div class="ven">Security check</div><div class="vph">/sɪˈkjʊərɪti tʃek/</div><div class="vzh">安全检查</div><button class="sb" onclick="speak('Security check')">🔊</button></div>
+      <div class="vi"><div class="ven">Immigration</div><div class="vph">/ˌɪmɪˈɡreɪʃən/</div><div class="vzh">入境检查</div><button class="sb" onclick="speak('Immigration')">🔊</button></div>
+      <div class="vi"><div class="ven">Customs</div><div class="vph">/ˈkʌstəmz/</div><div class="vzh">海关</div><button class="sb" onclick="speak('Customs')">🔊</button></div>
+      <div class="vi"><div class="ven">Baggage claim</div><div class="vph">/ˈbægɪdʒ kleɪm/</div><div class="vzh">行李认领处</div><button class="sb" onclick="speak('Baggage claim')">🔊</button></div>
+      <div class="vi"><div class="ven">Connecting flight</div><div class="vph">/kəˈnektɪŋ flaɪt/</div><div class="vzh">中转航班</div><button class="sb" onclick="speak('Connecting flight')">🔊</button></div>
+      <div class="vi"><div class="ven">Trade show</div><div class="vph">/treɪd ʃoʊ/</div><div class="vzh">贸易展览会</div><button class="sb" onclick="speak('Trade show')">🔊</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">💬 高频实用句</div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('I would like to check in for my flight to Munich, please.')">🔊 听</button><div><div class="pe">I'd like to check in for my flight to Munich, please.</div><div class="pz">我想为飞往慕尼黑的航班办理值机手续。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I have one checked bag and one carry-on.')">🔊 听</button><div><div class="pe">I have one checked bag and one carry-on.</div><div class="pz">我有一件托运行李和一件随身行李。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Which gate is my flight departing from?')">🔊 听</button><div><div class="pe">Which gate is my flight departing from?</div><div class="pz">我的航班从哪个登机口出发？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('What time does boarding start?')">🔊 听</button><div><div class="pe">What time does boarding start?</div><div class="pz">几点开始登机？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I am here for a business trip. I am attending the Electronica trade show in Munich.')">🔊 听</button><div><div class="pe">I'm here for a business trip. I'm attending the Electronica trade show in Munich.</div><div class="pz">我来出差，参加慕尼黑的Electronica电子展。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I have nothing to declare.')">🔊 听</button><div><div class="pe">I have nothing to declare.</div><div class="pz">我没有需要申报的物品。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could you please speak more slowly?')">🔊 听</button><div><div class="pe">Could you please speak more slowly?</div><div class="pz">您能说慢一点吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I will be staying for five days.')">🔊 听</button><div><div class="pe">I'll be staying for five days.</div><div class="pz">我将停留五天。</div></div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="ct">🎭 情景对话 1：办理值机</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-airport1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-airport1')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-airport1">
+        <div class="dl"><div class="spk spk-a">员工</div><div class="dtw"><div class="den">Good morning! May I see your passport and booking confirmation, please?</div><div class="dzh">早上好！请出示您的护照和订票确认单。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Sure, here you go. I'm on the flight to Munich.</div><div class="dzh">好的，给您。我乘坐飞往慕尼黑的航班。</div></div></div>
+        <div class="dl"><div class="spk spk-a">员工</div><div class="dtw"><div class="den">How many bags would you like to check in?</div><div class="dzh">您有几件行李需要托运？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Just one. This carry-on I'll take with me.</div><div class="dzh">只有一件。这个随身行李我自己带。</div></div></div>
+        <div class="dl"><div class="spk spk-a">员工</div><div class="dtw"><div class="den">Here is your boarding pass. Your flight departs from Gate B12 at 14:35. Boarding starts at 14:05.</div><div class="dzh">这是您的登机牌。您的航班从B12登机口出发，14:35起飞，14:05开始登机。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Thank you. Is there a business lounge I can use?</div><div class="dzh">谢谢。请问有商务休息室可以使用吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">员工</div><div class="dtw"><div class="den">Yes, the business lounge is on Level 3. Have a pleasant flight!</div><div class="dzh">有的，商务休息室在3层。祝您旅途愉快！</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">🎭 情景对话 2：入境检查</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-airport2')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-airport2')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-airport2">
+        <div class="dl"><div class="spk spk-a">官员</div><div class="dtw"><div class="den">What is the purpose of your visit to Germany?</div><div class="dzh">您来德国的目的是什么？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I'm here for a business trip. I'm attending the Electronica trade show in Munich.</div><div class="dzh">我是出差，参加慕尼黑的Electronica电子展。</div></div></div>
+        <div class="dl"><div class="spk spk-a">官员</div><div class="dtw"><div class="den">How long will you be staying?</div><div class="dzh">您将停留多长时间？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Five days. I'll leave on November 15th.</div><div class="dzh">五天。我11月15日离开。</div></div></div>
+        <div class="dl"><div class="spk spk-a">官员</div><div class="dtw"><div class="den">Where will you be staying?</div><div class="dzh">您住在哪里？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">At the Marriott Hotel in Munich city center.</div><div class="dzh">住在慕尼黑市中心的万豪酒店。</div></div></div>
+        <div class="dl"><div class="spk spk-a">官员</div><div class="dtw"><div class="den">Do you have anything to declare?</div><div class="dzh">您有需要申报的物品吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">No, I don't. Just personal belongings and PCB samples for display.</div><div class="dzh">没有。只有个人物品和展示用的电路板样品。</div></div></div>
+        <div class="dl"><div class="spk spk-a">官员</div><div class="dtw"><div class="den">Welcome to Germany. Enjoy the show!</div><div class="dzh">欢迎来到德国，祝展会顺利！</div></div></div>
+      </div>
+    </div>
+    <div class="tip"><h4>💡 入境提示</h4><ul><li>德国属申根区，如持中国护照需提前申请申根签证</li><li>携带展示样品入境请备好公司证明文件</li><li>若被追问请放松，如实回答即可</li></ul></div>
+  </div>
+</div>
+
+<!-- ===================== HOTEL ===================== -->
+<div id="hotel" class="sec">
+  <div class="sh"><div class="si">🏨</div><div class="st"><h2>Hotel English</h2><p>酒店英语 · 入住退房全搞定</p></div></div>
+  <div class="card">
+    <div class="ct">📚 核心词汇</div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Reservation</div><div class="vph">/ˌrezərˈveɪʃən/</div><div class="vzh">预订</div><button class="sb" onclick="speak('Reservation')">🔊</button></div>
+      <div class="vi"><div class="ven">Check-in / Check-out</div><div class="vph">/tʃek ɪn / tʃek aʊt/</div><div class="vzh">入住 / 退房</div><button class="sb" onclick="speak('Check in, check out')">🔊</button></div>
+      <div class="vi"><div class="ven">Single / Double room</div><div class="vph">/ˈsɪŋɡəl / ˈdʌbəl ruːm/</div><div class="vzh">单人间 / 双人间</div><button class="sb" onclick="speak('Single room, double room')">🔊</button></div>
+      <div class="vi"><div class="ven">Key card</div><div class="vph">/kiː kɑːrd/</div><div class="vzh">房间门卡</div><button class="sb" onclick="speak('Key card')">🔊</button></div>
+      <div class="vi"><div class="ven">Amenities</div><div class="vph">/əˈmenɪtiz/</div><div class="vzh">设施（含洗漱用品等）</div><button class="sb" onclick="speak('Amenities')">🔊</button></div>
+      <div class="vi"><div class="ven">Room service</div><div class="vph">/ruːm ˈsɜːrvɪs/</div><div class="vzh">客房服务</div><button class="sb" onclick="speak('Room service')">🔊</button></div>
+      <div class="vi"><div class="ven">Wake-up call</div><div class="vph">/weɪk ʌp kɔːl/</div><div class="vzh">叫醒服务</div><button class="sb" onclick="speak('Wake-up call')">🔊</button></div>
+      <div class="vi"><div class="ven">Late check-out</div><div class="vph">/leɪt tʃek aʊt/</div><div class="vzh">延迟退房</div><button class="sb" onclick="speak('Late check-out')">🔊</button></div>
+      <div class="vi"><div class="ven">Concierge</div><div class="vph">/ˌkɒnsiˈerʒ/</div><div class="vzh">礼宾服务台</div><button class="sb" onclick="speak('Concierge')">🔊</button></div>
+      <div class="vi"><div class="ven">Exhibition center</div><div class="vph">/ˌeksɪˈbɪʃən ˈsentər/</div><div class="vzh">展览中心</div><button class="sb" onclick="speak('Exhibition center')">🔊</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">💬 高频实用句</div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('I have a reservation under the name Zhang Wei.')">🔊 听</button><div><div class="pe">I have a reservation under the name Zhang Wei.</div><div class="pz">我有预订，名字是张伟。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Is breakfast included?')">🔊 听</button><div><div class="pe">Is breakfast included?</div><div class="pz">早餐含在内吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could I have a room with a city view, please?')">🔊 听</button><div><div class="pe">Could I have a room with a city view, please?</div><div class="pz">能给我一间有城市景观的房间吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could you arrange a wake-up call at seven AM?')">🔊 听</button><div><div class="pe">Could you arrange a wake-up call at 7 AM?</div><div class="pz">能帮我安排早上七点的叫醒服务吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('The air conditioning does not seem to be working.')">🔊 听</button><div><div class="pe">The air conditioning doesn't seem to be working.</div><div class="pz">空调好像坏了。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could I request a late check-out until two PM?')">🔊 听</button><div><div class="pe">Could I request a late check-out until 2 PM?</div><div class="pz">能申请延迟到下午两点退房吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could you please arrange a taxi to the Messe München for eight thirty AM?')">🔊 听</button><div><div class="pe">Could you arrange a taxi to Messe München for 8:30 AM?</div><div class="pz">能帮我安排早上八点半去慕尼黑展览中心的出租车吗？</div></div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="ct">🎭 情景对话：办理入住</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-hotel1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-hotel1')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-hotel1">
+        <div class="dl"><div class="spk spk-a">前台</div><div class="dtw"><div class="den">Good evening! Welcome to the Marriott. Do you have a reservation?</div><div class="dzh">晚上好！欢迎来到万豪酒店。您有预订吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Yes, I have a booking under the name Li Ming. Five nights.</div><div class="dzh">有的，我预订了五晚，名字是李明。</div></div></div>
+        <div class="dl"><div class="spk spk-a">前台</div><div class="dtw"><div class="den">Let me look that up... Yes, I have a standard double room for you. Is breakfast included in your booking?</div><div class="dzh">让我查一下……好的，是一间标准大床房。您的订单含早餐吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I'm not sure. Could you check?</div><div class="dzh">我不确定，能帮我查一下吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">前台</div><div class="dtw"><div class="den">Yes, breakfast is included. It's served from 6:30 to 10:30 AM on the second floor.</div><div class="dzh">含早餐，早餐时间是6:30到10:30，在二楼餐厅。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Great. Could I also get a wake-up call at 7 AM each morning?</div><div class="dzh">太好了。能每天早上七点给我叫醒服务吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">前台</div><div class="dtw"><div class="den">Of course. Here is your key card. Room 412, fourth floor. The elevators are to your right. Enjoy your stay!</div><div class="dzh">当然。这是您的门卡，房间是四楼412房，电梯在右边。祝您入住愉快！</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Thank you. What's the Wi-Fi password?</div><div class="dzh">谢谢。Wi-Fi密码是多少？</div></div></div>
+        <div class="dl"><div class="spk spk-a">前台</div><div class="dtw"><div class="den">It's on the welcome card inside your room. Is there anything else I can help you with?</div><div class="dzh">在房间内的欢迎卡上。还有什么需要帮助的吗？</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== TAXI ===================== -->
+<div id="taxi" class="sec">
+  <div class="sh"><div class="si">🚕</div><div class="st"><h2>Transport English</h2><p>交通出行英语 · 打车、地铁轻松搞定</p></div></div>
+  <div class="card">
+    <div class="ct">📚 核心词汇</div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Taxi / Cab</div><div class="vph">/ˈtæksi/</div><div class="vzh">出租车</div><button class="sb" onclick="speak('Taxi, cab')">🔊</button></div>
+      <div class="vi"><div class="ven">Destination</div><div class="vph">/ˌdestɪˈneɪʃən/</div><div class="vzh">目的地</div><button class="sb" onclick="speak('Destination')">🔊</button></div>
+      <div class="vi"><div class="ven">Fare</div><div class="vph">/fer/</div><div class="vzh">车费</div><button class="sb" onclick="speak('Fare')">🔊</button></div>
+      <div class="vi"><div class="ven">Receipt</div><div class="vph">/rɪˈsiːt/</div><div class="vzh">收据</div><button class="sb" onclick="speak('Receipt')">🔊</button></div>
+      <div class="vi"><div class="ven">Exhibition center / Messe</div><div class="vph">/ˌeksɪˈbɪʃən ˈsentər/</div><div class="vzh">展览中心</div><button class="sb" onclick="speak('Messe München, the exhibition center')">🔊</button></div>
+      <div class="vi"><div class="ven">Main entrance</div><div class="vph">/meɪn ˈentrəns/</div><div class="vzh">正门/主入口</div><button class="sb" onclick="speak('Main entrance')">🔊</button></div>
+      <div class="vi"><div class="ven">Traffic jam</div><div class="vph">/ˈtræfɪk dʒæm/</div><div class="vzh">堵车</div><button class="sb" onclick="speak('Traffic jam')">🔊</button></div>
+      <div class="vi"><div class="ven">Metro / Subway / U-Bahn</div><div class="vph">/ˈmetroʊ/</div><div class="vzh">地铁（U-Bahn为德语）</div><button class="sb" onclick="speak('Metro, subway, U-Bahn')">🔊</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">💬 高频实用句</div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('Please take me to Messe München, the east entrance.')">🔊 听</button><div><div class="pe">Please take me to Messe München — the east entrance.</div><div class="pz">请载我去慕尼黑展览中心东入口。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('How long will it take to get there?')">🔊 听</button><div><div class="pe">How long will it take to get there?</div><div class="pz">大概需要多长时间？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could I have a receipt, please?')">🔊 听</button><div><div class="pe">Could I have a receipt, please?</div><div class="pz">能给我一张收据吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Can I pay by credit card?')">🔊 听</button><div><div class="pe">Can I pay by credit card?</div><div class="pz">可以刷信用卡吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Please drop me off at the main entrance.')">🔊 听</button><div><div class="pe">Please drop me off at the main entrance.</div><div class="pz">请在正门让我下车。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I am in a bit of a hurry. Is there a faster route?')">🔊 听</button><div><div class="pe">I'm in a bit of a hurry. Is there a faster route?</div><div class="pz">我有点赶时间，有更快的路线吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Which metro line goes to the exhibition center?')">🔊 听</button><div><div class="pe">Which metro line goes to the exhibition center?</div><div class="pz">哪条地铁线可以到展览中心？</div></div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="ct">🎭 情景对话：乘坐出租车</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-taxi1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-taxi1')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-taxi1">
+        <div class="dl"><div class="spk spk-a">司机</div><div class="dtw"><div class="den">Good morning! Where would you like to go?</div><div class="dzh">早上好！您去哪里？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Good morning. Please take me to Messe München — the east entrance. It's for the Electronica trade show.</div><div class="dzh">早上好。请载我去慕尼黑展览中心东入口，我要参加Electronica电子展。</div></div></div>
+        <div class="dl"><div class="spk spk-a">司机</div><div class="dtw"><div class="den">Of course! Traffic might be a bit heavy this morning since the show just opened. About 20 to 25 minutes.</div><div class="dzh">好的！今早因为展会开幕，可能有点堵，大约需要20到25分钟。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">That's fine. Could you use the GPS just in case?</div><div class="dzh">没关系。能用GPS导航吗，以防万一？</div></div></div>
+        <div class="dl"><div class="spk spk-a">司机</div><div class="dtw"><div class="den">Already set. [Arriving] Here we are — the east entrance of Messe München.</div><div class="dzh">已经设好了。[到达] 到了，这就是慕尼黑展览中心东入口。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Thank you. How much is the fare?</div><div class="dzh">谢谢。车费多少？</div></div></div>
+        <div class="dl"><div class="spk spk-a">司机</div><div class="dtw"><div class="den">That's 18 euros.</div><div class="dzh">18欧元。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Here's 20. Keep the change. Could I have a receipt, please?</div><div class="dzh">给您20，不用找零了。能给我一张收据吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">司机</div><div class="dtw"><div class="den">Certainly. Here you go. Enjoy the show!</div><div class="dzh">当然，给您。祝展会顺利！</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== RESTAURANT ===================== -->
+<div id="restaurant" class="sec">
+  <div class="sh"><div class="si">🍽️</div><div class="st"><h2>Restaurant English</h2><p>餐厅英语 · 点餐结账全程无障碍</p></div></div>
+  <div class="card">
+    <div class="ct">📚 核心词汇</div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Menu</div><div class="vph">/ˈmenjuː/</div><div class="vzh">菜单</div><button class="sb" onclick="speak('Menu')">🔊</button></div>
+      <div class="vi"><div class="ven">Appetizer / Starter</div><div class="vph">/ˈæpɪtaɪzər/</div><div class="vzh">开胃菜</div><button class="sb" onclick="speak('Appetizer, starter')">🔊</button></div>
+      <div class="vi"><div class="ven">Main course</div><div class="vph">/meɪn kɔːrs/</div><div class="vzh">主菜</div><button class="sb" onclick="speak('Main course')">🔊</button></div>
+      <div class="vi"><div class="ven">Dessert</div><div class="vph">/dɪˈzɜːrt/</div><div class="vzh">甜点</div><button class="sb" onclick="speak('Dessert')">🔊</button></div>
+      <div class="vi"><div class="ven">Sparkling / Still water</div><div class="vph">/ˈspɑːrklɪŋ/</div><div class="vzh">气泡水 / 普通水</div><button class="sb" onclick="speak('Sparkling water or still water?')">🔊</button></div>
+      <div class="vi"><div class="ven">The bill / Check</div><div class="vph">/ðə bɪl/</div><div class="vzh">账单</div><button class="sb" onclick="speak('The bill please')">🔊</button></div>
+      <div class="vi"><div class="ven">Tip / Gratuity</div><div class="vph">/tɪp/</div><div class="vzh">小费</div><button class="sb" onclick="speak('Tip, gratuity')">🔊</button></div>
+      <div class="vi"><div class="ven">Allergy</div><div class="vph">/ˈælərʤi/</div><div class="vzh">过敏</div><button class="sb" onclick="speak('Allergy')">🔊</button></div>
+      <div class="vi"><div class="ven">Vegetarian</div><div class="vph">/ˌvedʒɪˈteriən/</div><div class="vzh">素食</div><button class="sb" onclick="speak('Vegetarian')">🔊</button></div>
+      <div class="vi"><div class="ven">Well-done / Medium / Rare</div><div class="vph">/ˈweldʌn/</div><div class="vzh">全熟/五成熟/三成熟</div><button class="sb" onclick="speak('Well done, medium, or rare?')">🔊</button></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">💬 高频实用句</div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('Do you have a table for three, please?')">🔊 听</button><div><div class="pe">Do you have a table for three, please?</div><div class="pz">请问有三人桌吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could I see the menu, please?')">🔊 听</button><div><div class="pe">Could I see the menu, please?</div><div class="pz">能给我看看菜单吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('What do you recommend?')">🔊 听</button><div><div class="pe">What do you recommend?</div><div class="pz">您有什么推荐吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I am allergic to shellfish. Does this dish contain any shellfish?')">🔊 听</button><div><div class="pe">I'm allergic to shellfish. Does this dish contain any shellfish?</div><div class="pz">我对贝类过敏，这道菜里有贝类吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I will have the grilled salmon, please.')">🔊 听</button><div><div class="pe">I'll have the grilled salmon, please.</div><div class="pz">我要烤三文鱼。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Could we have the bill, please? We would like to pay separately.')">🔊 听</button><div><div class="pe">Could we have the bill, please? We'd like to pay separately.</div><div class="pz">能结账吗？我们分开付。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Is service charge included in the bill?')">🔊 听</button><div><div class="pe">Is service charge included in the bill?</div><div class="pz">账单里含服务费吗？</div></div></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="ct">🎭 情景对话：客户商务晚餐</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-rest1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-rest1')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-rest1">
+        <div class="dl"><div class="spk spk-a">服务员</div><div class="dtw"><div class="den">Good evening! Do you have a reservation?</div><div class="dzh">晚上好！请问有预订吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Yes, under the name Li Ming, for three people.</div><div class="dzh">有的，名字是李明，三位。</div></div></div>
+        <div class="dl"><div class="spk spk-a">服务员</div><div class="dtw"><div class="den">Right this way, please. Can I start you off with something to drink?</div><div class="dzh">请跟我来。先来点喝的吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I'll have a sparkling water. And my colleague would like a beer, please.</div><div class="dzh">我要一杯气泡水。我的同事要一杯啤酒。</div></div></div>
+        <div class="dl"><div class="spk spk-a">服务员</div><div class="dtw"><div class="den">Are you ready to order?</div><div class="dzh">可以点餐了吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">What do you recommend for the main course?</div><div class="dzh">主菜有什么推荐？</div></div></div>
+        <div class="dl"><div class="spk spk-a">服务员</div><div class="dtw"><div class="den">The Wiener Schnitzel is very popular — it's a breaded veal cutlet, a classic Bavarian dish. Also, our grilled salmon is excellent tonight.</div><div class="dzh">维也纳炸猪排非常受欢迎——这是一道巴伐利亚传统菜。今晚的烤三文鱼也很棒。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I'll have the Wiener Schnitzel. And for my colleague, do you have any vegetarian options?</div><div class="dzh">我要维也纳炸猪排。我同事有素食选项吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">服务员</div><div class="dtw"><div class="den">Yes, we have a mushroom risotto and a roasted vegetable pasta.</div><div class="dzh">有的，我们有蘑菇烩饭和烤蔬菜意面。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">We'll go with the mushroom risotto. Thank you!</div><div class="dzh">那就要蘑菇烩饭吧，谢谢！</div></div></div>
+      </div>
+    </div>
+    <div class="tip"><h4>💡 德国餐厅礼仪</h4><ul><li>德国小费通常为消费额的5-10%，现金最佳</li><li>点水时服务员通常会问：Sparkling or still?（气泡水还是普通水？）</li><li>商务宴请可主动说：This is on me.（我来买单）</li></ul></div>
+  </div>
+</div>
+
+<!-- ===================== CLIENT MEETING ===================== -->
+<div id="client" class="sec">
+  <div class="sh"><div class="si">🤝</div><div class="st"><h2>PCB Client Meeting English</h2><p>客户会面 · 展位接待、技术方案、交期洽谈</p></div></div>
+
+  <div class="card">
+    <div class="ct">📚 商务词汇</div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Trade show booth</div><div class="vph">/treɪd ʃoʊ buːθ/</div><div class="vzh">展位</div><button class="sb" onclick="speak('Trade show booth')">🔊</button></div>
+      <div class="vi"><div class="ven">Business card</div><div class="vph">/ˈbɪznəs kɑːrd/</div><div class="vzh">名片</div><button class="sb" onclick="speak('Business card')">🔊</button></div>
+      <div class="vi"><div class="ven">Quotation / Quote</div><div class="vph">/kwoʊˈteɪʃən/</div><div class="vzh">报价单</div><button class="sb" onclick="speak('Quotation')">🔊</button></div>
+      <div class="vi"><div class="ven">Lead time</div><div class="vph">/liːd taɪm/</div><div class="vzh">交货期</div><button class="sb" onclick="speak('Lead time')">🔊</button></div>
+      <div class="vi"><div class="ven">MOQ</div><div class="vph">/em oʊ kjuː/</div><div class="vzh">最小起订量</div><button class="sb" onclick="speak('Minimum order quantity, MOQ')">🔊</button></div>
+      <div class="vi"><div class="ven">Prototype</div><div class="vph">/ˈproʊtətaɪp/</div><div class="vzh">样板 / 原型板</div><button class="sb" onclick="speak('Prototype')">🔊</button></div>
+      <div class="vi"><div class="ven">Mass production</div><div class="vph">/mæs prəˈdʌkʃən/</div><div class="vzh">量产</div><button class="sb" onclick="speak('Mass production')">🔊</button></div>
+      <div class="vi"><div class="ven">On-time delivery</div><div class="vph">/ɒn taɪm dɪˈlɪvəri/</div><div class="vzh">准时交货</div><button class="sb" onclick="speak('On-time delivery')">🔊</button></div>
+      <div class="vi"><div class="ven">Working days</div><div class="vph">/ˈwɜːrkɪŋ deɪz/</div><div class="vzh">工作日</div><button class="sb" onclick="speak('Working days')">🔊</button></div>
+      <div class="vi"><div class="ven">Express service</div><div class="vph">/ɪkˈspres ˈsɜːrvɪs/</div><div class="vzh">加急服务</div><button class="sb" onclick="speak('Express service')">🔊</button></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">📚 PCB技术词汇 <span class="tb">核心</span></div>
+    <div class="vg">
+      <div class="vi"><div class="ven">Printed Circuit Board</div><div class="vph">/ˈprɪntɪd ˈsɜːrkɪt bɔːrd/</div><div class="vzh">印制电路板（PCB）</div><button class="sb" onclick="speak('Printed circuit board')">🔊</button></div>
+      <div class="vi"><div class="ven">Multilayer board</div><div class="vph">/ˈmʌltiˌleɪər bɔːrd/</div><div class="vzh">多层板</div><button class="sb" onclick="speak('Multilayer board')">🔊</button></div>
+      <div class="vi"><div class="ven">Impedance control</div><div class="vph">/ɪmˈpiːdəns kənˈtroʊl/</div><div class="vzh">阻抗控制</div><button class="sb" onclick="speak('Impedance control')">🔊</button></div>
+      <div class="vi"><div class="ven">FR4 material</div><div class="vph">/ef ɑːr fɔːr məˈtɪriəl/</div><div class="vzh">FR4基材</div><button class="sb" onclick="speak('FR4 material')">🔊</button></div>
+      <div class="vi"><div class="ven">High Tg FR4</div><div class="vph">/haɪ tiː dʒiː ef ɑːr fɔːr/</div><div class="vzh">高Tg FR4（耐高温）</div><button class="sb" onclick="speak('High Tg FR4')">🔊</button></div>
+      <div class="vi"><div class="ven">Rogers material</div><div class="vph">/ˈrɒdʒərz məˈtɪriəl/</div><div class="vzh">罗杰斯板材（高频）</div><button class="sb" onclick="speak('Rogers material')">🔊</button></div>
+      <div class="vi"><div class="ven">ENIG</div><div class="vph">/iː en aɪ dʒiː/</div><div class="vzh">化学镍金表面处理</div><button class="sb" onclick="speak('Electroless Nickel Immersion Gold, ENIG')">🔊</button></div>
+      <div class="vi"><div class="ven">HASL</div><div class="vph">/hæzəl/</div><div class="vzh">热风整平表面处理</div><button class="sb" onclick="speak('Hot Air Solder Leveling, HASL')">🔊</button></div>
+      <div class="vi"><div class="ven">OSP</div><div class="vph">/oʊ es piː/</div><div class="vzh">有机保焊剂表面处理</div><button class="sb" onclick="speak('Organic Solderability Preservative, OSP')">🔊</button></div>
+      <div class="vi"><div class="ven">Blind via / Buried via</div><div class="vph">/blaɪnd vaɪə/</div><div class="vzh">盲孔 / 埋孔</div><button class="sb" onclick="speak('Blind via and buried via')">🔊</button></div>
+      <div class="vi"><div class="ven">HDI</div><div class="vph">/eɪtʃ diː aɪ/</div><div class="vzh">高密度互连</div><button class="sb" onclick="speak('High Density Interconnect, HDI')">🔊</button></div>
+      <div class="vi"><div class="ven">DFM review</div><div class="vph">/diː ef em rɪˈvjuː/</div><div class="vzh">可制造性设计分析</div><button class="sb" onclick="speak('Design for Manufacturability review, DFM')">🔊</button></div>
+      <div class="vi"><div class="ven">Gerber files</div><div class="vph">/ˈɡɜːrbər faɪlz/</div><div class="vzh">Gerber文件</div><button class="sb" onclick="speak('Gerber files')">🔊</button></div>
+      <div class="vi"><div class="ven">IPC Class 2 / Class 3</div><div class="vph">/aɪ piː siː klæs/</div><div class="vzh">IPC二级/三级标准</div><button class="sb" onclick="speak('IPC Class 2 and IPC Class 3')">🔊</button></div>
+      <div class="vi"><div class="ven">RoHS compliant</div><div class="vph">/roʊz kəmˈplaɪənt/</div><div class="vzh">符合RoHS环保标准</div><button class="sb" onclick="speak('RoHS compliant')">🔊</button></div>
+      <div class="vi"><div class="ven">Signal integrity</div><div class="vph">/ˈsɪɡnəl ɪnˈteɡrɪti/</div><div class="vzh">信号完整性</div><button class="sb" onclick="speak('Signal integrity')">🔊</button></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">💬 展位接待常用句</div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('Welcome to our booth! I am David from ABC PCB Solutions. How can I help you today?')">🔊 听</button><div><div class="pe">Welcome to our booth! I'm David from ABC PCB Solutions. How can I help you today?</div><div class="pz">欢迎来到我们的展位！我是ABC PCB的David，有什么可以帮您的？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('What kind of PCB solutions are you looking for?')">🔊 听</button><div><div class="pe">What kind of PCB solutions are you looking for?</div><div class="pz">您在寻找哪方面的PCB解决方案？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('We specialize in multilayer PCBs, from 4 to 32 layers.')">🔊 听</button><div><div class="pe">We specialize in multilayer PCBs, from 4 to 32 layers.</div><div class="pz">我们专注于多层PCB，从4层到32层。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('We are ISO 9001 certified, UL approved, and fully RoHS compliant.')">🔊 听</button><div><div class="pe">We're ISO 9001 certified, UL approved, and fully RoHS compliant.</div><div class="pz">我们持有ISO 9001认证，UL批准，完全符合RoHS标准。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Would you like to see some of our samples and capability overview?')">🔊 听</button><div><div class="pe">Would you like to see some of our samples and capability overview?</div><div class="pz">您想看看我们的样品和能力简介吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Shall we schedule a detailed technical discussion tomorrow?')">🔊 听</button><div><div class="pe">Shall we schedule a detailed technical discussion tomorrow?</div><div class="pz">我们明天约个时间做详细的技术交流？</div></div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="ct">💬 交期谈判常用句 <span class="tb">重要</span></div>
+    <ul class="pl">
+      <li class="pi"><button class="psb" onclick="speak('What is your required lead time for prototypes?')">🔊 听</button><div><div class="pe">What is your required lead time for prototypes?</div><div class="pz">您的样板需要多少交货期？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Our standard lead time for prototypes is 7 working days.')">🔊 听</button><div><div class="pe">Our standard lead time for prototypes is 7 working days.</div><div class="pz">我们样板的标准交期是7个工作日。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('We also offer express service — 3 to 5 working days with a twenty percent surcharge.')">🔊 听</button><div><div class="pe">We also offer express service — 3 to 5 working days with a 20% surcharge.</div><div class="pz">我们也提供加急服务——3到5个工作日，加收20%费用。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('For mass production, the lead time is typically 15 to 20 working days.')">🔊 听</button><div><div class="pe">For mass production, the lead time is typically 15 to 20 working days.</div><div class="pz">量产交期通常是15到20个工作日。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Our on-time delivery rate for the past twelve months has been 98.7 percent.')">🔊 听</button><div><div class="pe">Our on-time delivery rate for the past 12 months has been 98.7%.</div><div class="pz">我们过去12个月的准时交货率是98.7%。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('We provide a dedicated project manager and weekly production updates.')">🔊 听</button><div><div class="pe">We provide a dedicated project manager and weekly production updates.</div><div class="pz">我们为每位客户配备专属项目经理并提供每周生产进度更新。</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('Can you commit to delivery by November thirtieth?')">🔊 听</button><div><div class="pe">Can you commit to delivery by November 30th?</div><div class="pz">你们能保证11月30日前交货吗？</div></div></li>
+      <li class="pi"><button class="psb" onclick="speak('I can have a detailed quotation ready within 24 hours.')">🔊 听</button><div><div class="pe">I can have a detailed quotation ready within 24 hours.</div><div class="pz">我可以在24小时内准备好详细报价单。</div></div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="ct">🎭 对话 1：展位首次接触</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-c1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-c1')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-c1">
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Welcome to our booth! I'm David from ShenZhen PCB Pro. Are you looking for PCB solutions?</div><div class="dzh">欢迎来到我们的展位！我是深圳PCB Pro的David，您在找PCB解决方案吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Hi David, I'm Michael from TechCorp Germany. We're looking for a new PCB manufacturer for our IoT projects.</div><div class="dzh">你好David，我是TechCorp德国公司的Michael，我们在为物联网项目寻找新的PCB制造商。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Great timing! What types of boards do you mainly need?</div><div class="dzh">来得正好！您主要需要什么类型的板？</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Mostly 4 and 6-layer boards with controlled impedance. Volume is around 2,000 pieces per month.</div><div class="dzh">主要是4层和6层有阻抗控制要求的板，月用量约2000片。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">That's our specialty. We manufacture 4 to 32-layer boards with full impedance control. Let me show you some samples.</div><div class="dzh">这正是我们的专项。我们生产4到32层板，完全支持阻抗控制。来看看我们的样品。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">What certifications do you have?</div><div class="dzh">您们有哪些认证？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">We are ISO 9001 certified, UL approved, and fully RoHS compliant. We also meet IPC Class 2 and Class 3 standards.</div><div class="dzh">我们持有ISO 9001认证、UL批准，完全符合RoHS标准，同时满足IPC二级和三级标准。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Impressive. Could I have your product catalog?</div><div class="dzh">很不错。能给我一份产品目录吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Of course! Here's our catalog and my business card. Shall we schedule a technical discussion tomorrow at 10 AM?</div><div class="dzh">当然！这是我们的目录和我的名片。我们明天上午10点安排技术交流如何？</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">That works for me. Looking forward to it!</div><div class="dzh">没问题，期待！</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">🎭 对话 2：技术参数讨论</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-c2')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-c2')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-c2">
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Let's discuss the impedance requirements. We need 50-ohm single-ended and 100-ohm differential pairs on a 6-layer board.</div><div class="dzh">来谈谈阻抗要求。我们需要6层板上有50欧单端阻抗和100欧差分阻抗。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">That's very achievable. We use Polar Software for impedance verification. Our standard tolerance is plus or minus 5%, and we can go to plus or minus 3% if needed.</div><div class="dzh">完全可以实现。我们用Polar软件进行阻抗验证，标准公差±5%，如有需要可达±3%。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">What stack-up do you recommend for these requirements?</div><div class="dzh">您推荐什么样的叠层结构来满足这些要求？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">For a 6-layer board with those specs, I'd recommend FR4 at 4.4 dielectric constant. The trace width for 50-ohm would be approximately 0.127mm. I can prepare a detailed stack-up proposal.</div><div class="dzh">对于这些规格的6层板，我推荐介电常数4.4的FR4。50欧的线宽约为0.127mm，我可以准备详细的叠层设计方案。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">What about via design? We're considering blind vias to reduce parasitic capacitance.</div><div class="dzh">过孔设计方面呢？我们在考虑用盲孔来降低寄生电容。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Excellent choice. We fully support blind and buried vias. For HDI designs, we offer laser-drilled microvias with a minimum diameter of 0.1mm. This can significantly reduce your board size.</div><div class="dzh">很好的选择。我们完全支持盲孔和埋孔。HDI设计方面，我们提供最小直径0.1mm的激光钻微孔，可显著减小板尺寸。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Our boards need to operate at up to 150 degrees Celsius continuously. Is standard FR4 sufficient?</div><div class="dzh">我们的板需要在150摄氏度环境下持续工作，标准FR4够用吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">For that temperature range, I'd recommend High Tg FR4 with a glass transition temperature of 170°C. It provides much better thermal stability and is only slightly more expensive.</div><div class="dzh">对于这个温度范围，我推荐玻璃化温度170°C的高Tg FR4，热稳定性好得多，价格仅略高一些。</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">🎭 对话 3：交期与报价洽谈 <span class="tb">核心</span></div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-c3')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-c3')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-c3">
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Now, let's talk about lead times. We need prototypes first to validate the design.</div><div class="dzh">现在谈谈交期。我们先需要样板来验证设计。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">For a 6-layer prototype, our standard lead time is 7 working days. We also offer express service — 5 working days with a 20% surcharge.</div><div class="dzh">6层样板的标准交期是7个工作日，也提供加急服务——5个工作日，加收20%费用。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Let's go with the express service. How many pieces minimum for prototyping?</div><div class="dzh">那我们选加急服务。样板最少要下几片？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Our MOQ for prototypes is 5 pieces. But most customers order 10 to 20 for initial testing.</div><div class="dzh">样板的最小起订量是5片，但大多数客户初次测试会订10到20片。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">We'll order 20 pieces. If they pass testing, we'll move to mass production — about 2,000 pieces per month. What's the lead time?</div><div class="dzh">我们订20片。如果测试通过，就转量产，约每月2000片，交期是多久？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">For 2,000 pieces of 6-layer boards, lead time is 15 to 18 working days from order confirmation to delivery.</div><div class="dzh">2000片6层板的交期是从订单确认到交货15到18个工作日。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Can you guarantee that delivery date? We have very tight production schedules.</div><div class="dzh">能保证这个交期吗？我们的生产计划非常紧张。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Yes, we can. We assign a dedicated project manager for each customer and provide weekly production updates. Our on-time delivery rate is 98.7% over the past 12 months.</div><div class="dzh">可以保证。我们为每位客户配置专属项目经理，提供每周生产进度更新。过去12个月准时交货率98.7%。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">What happens if there is a delay on your end?</div><div class="dzh">如果你们这边延误了怎么办？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">In that case, we would expedite the order at no extra charge and provide compensation per our service level agreement. But honestly, it's very rare.</div><div class="dzh">那种情况下，我们会免费加急处理，并按服务协议给予补偿。不过老实说，这种情况极少发生。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Good. When can I expect a quotation?</div><div class="dzh">好的。我什么时候能收到报价单？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I can have a detailed quotation ready within 24 hours. Shall I send it to your email?</div><div class="dzh">我可以在24小时内准备好详细报价单，发到您的邮箱吗？</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Please do. Here's my business card.</div><div class="dzh">麻烦了，这是我的名片。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Thank you, Michael. It's been a pleasure talking with you. I'll send the quote tonight!</div><div class="dzh">谢谢您，Michael。很高兴与您交流，我今晚就把报价发给您！</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">🎭 对话 4：技术问题与解决方案</div>
+    <div class="dlg">
+      <div class="dlg-ctrl">
+        <button class="btn btn-p" onclick="playDlg('dlg-c4')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="toggleZh('dlg-c4')">显示/隐藏中文</button>
+      </div>
+      <div id="dlg-c4">
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">We're having signal integrity issues on our current boards. The high-speed signals show significant degradation above 3 GHz.</div><div class="dzh">我们当前的板存在信号完整性问题，高速信号在3GHz以上有明显衰减。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">I understand. Signal integrity issues at high frequency can be caused by several factors — impedance mismatch, via stubs, or insufficient ground plane coverage. Which PCB manufacturer are you using currently?</div><div class="dzh">我明白。高频信号完整性问题可能由多种因素引起——阻抗不匹配、过孔残桩或接地层覆盖不足。您目前用的是哪家PCB制造商？</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">We suspect the via design is the main issue. The through-hole vias might be causing reflections.</div><div class="dzh">我们怀疑主要问题在过孔设计，通孔可能导致了反射。</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">That's a very valid concern. Long via stubs cause reflections at high frequencies. The best solution is back-drilling — we remove the stub portion of the via, which dramatically improves signal quality above 3 GHz.</div><div class="dzh">这个判断很正确。过孔残桩在高频下会引起反射。最好的解决方案是背钻——去除过孔的残桩部分，可显著改善3GHz以上的信号质量。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Can you do back-drilling?</div><div class="dzh">你们能做背钻吗？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Yes, we offer controlled depth back-drilling. It's one of our core capabilities for high-speed applications. I'd also recommend we do a complimentary DFM review of your Gerber files to check for any other potential issues.</div><div class="dzh">可以，我们提供受控深度背钻，这是我们高速应用的核心能力之一。我也建议免费为您的Gerber文件做DFM分析，检查是否还有其他潜在问题。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">A complimentary DFM review sounds great. What do you need from us?</div><div class="dzh">免费DFM分析听起来很好，你们需要我们提供什么？</div></div></div>
+        <div class="dl"><div class="spk spk-b">您</div><div class="dtw"><div class="den">Just send us your Gerber files, drill file, impedance requirements, and stack-up information. We'll review it within 48 hours and send back a detailed DFM report at no charge.</div><div class="dzh">发给我们Gerber文件、钻孔文件、阻抗要求和叠层信息即可，我们48小时内回复详细的DFM报告，完全免费。</div></div></div>
+        <div class="dl"><div class="spk spk-a">客户</div><div class="dtw"><div class="den">Excellent! I'll send the files right after the show.</div><div class="dzh">太好了！展会结束后我马上发文件。</div></div></div>
+      </div>
+    </div>
+    <div class="rp">
+      <h4>🎯 角色扮演练习建议</h4>
+      <p>两人一组，一人扮演参展客户，一人扮演PCB厂商代表。客户提出以下需求，代表给出专业回应：<br><br>
+      场景A：客户需要8层HDI板，月产量5000片，要求交期12个工作日，表面处理ENIG<br>
+      场景B：客户反映现有板出现分层问题，要求分析原因并给出解决方案<br>
+      场景C：客户询问Rogers 4350B高频材料的供货和交期</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PCB VOCAB ===================== -->
+<div id="vocab" class="sec">
+  <div class="sh"><div class="si">📋</div><div class="st"><h2>PCB Technical Glossary</h2><p>PCB技术词汇表 · 可搜索</p></div></div>
+  <div class="card">
+    <input class="gs" type="text" placeholder="🔍 搜索词汇（中文或英文）..." oninput="filterGlossary(this.value)" id="gsearch">
+    <div style="overflow-x:auto">
+    <table id="gtable">
+      <thead><tr><th>英文术语</th><th>发音</th><th>中文</th><th>说明</th><th style="width:60px">听</th></tr></thead>
+      <tbody id="gbody">
+        <tr><td>Printed Circuit Board (PCB)</td><td>/ˈprɪntɪd ˈsɜːrkɪt/</td><td>印制电路板</td><td>电子元件的支撑体，提供电气连接</td><td><button class="psb" onclick="speak('Printed Circuit Board')">🔊</button></td></tr>
+        <tr><td>Single-layer board</td><td>/ˈsɪŋɡəl leɪər/</td><td>单层板</td><td>只有一层铜导体的PCB</td><td><button class="psb" onclick="speak('Single layer board')">🔊</button></td></tr>
+        <tr><td>Double-layer board</td><td>/ˈdʌbəl leɪər/</td><td>双层板</td><td>两层铜导体，顶层和底层</td><td><button class="psb" onclick="speak('Double layer board')">🔊</button></td></tr>
+        <tr><td>Multilayer board</td><td>/ˈmʌltiˌleɪər/</td><td>多层板</td><td>超过两层铜导体的PCB，4、6、8层等</td><td><button class="psb" onclick="speak('Multilayer board')">🔊</button></td></tr>
+        <tr><td>FR4</td><td>/ef ɑːr fɔːr/</td><td>FR4基材</td><td>最常用的PCB基材，玻璃纤维环氧树脂</td><td><button class="psb" onclick="speak('FR4')">🔊</button></td></tr>
+        <tr><td>High Tg FR4</td><td>/haɪ tiː dʒiː/</td><td>高Tg FR4</td><td>耐高温FR4，玻璃化温度≥170°C</td><td><button class="psb" onclick="speak('High Tg FR4')">🔊</button></td></tr>
+        <tr><td>Rogers material</td><td>/ˈrɒdʒərz/</td><td>罗杰斯板材</td><td>高频/微波应用专用材料，如Rogers 4350B</td><td><button class="psb" onclick="speak('Rogers material')">🔊</button></td></tr>
+        <tr><td>Impedance control</td><td>/ɪmˈpiːdəns/</td><td>阻抗控制</td><td>控制信号线特性阻抗，常见50Ω/100Ω</td><td><button class="psb" onclick="speak('Impedance control')">🔊</button></td></tr>
+        <tr><td>Differential pair</td><td>/ˌdɪfəˈrenʃəl peər/</td><td>差分对</td><td>两条等长平行走线，用于差分信号传输</td><td><button class="psb" onclick="speak('Differential pair')">🔊</button></td></tr>
+        <tr><td>ENIG</td><td>/iː en aɪ dʒiː/</td><td>化学镍金</td><td>Electroless Nickel Immersion Gold，焊接性好、平整</td><td><button class="psb" onclick="speak('Electroless Nickel Immersion Gold')">🔊</button></td></tr>
+        <tr><td>HASL</td><td>/hæzəl/</td><td>热风整平</td><td>Hot Air Solder Leveling，经济实用</td><td><button class="psb" onclick="speak('Hot Air Solder Leveling, HASL')">🔊</button></td></tr>
+        <tr><td>OSP</td><td>/oʊ es piː/</td><td>有机保焊剂</td><td>Organic Solderability Preservative，环保</td><td><button class="psb" onclick="speak('Organic Solderability Preservative')">🔊</button></td></tr>
+        <tr><td>ENEPIG</td><td>/en ɪˈpɪg/</td><td>化学镍钯金</td><td>高档表面处理，可用于引线键合</td><td><button class="psb" onclick="speak('Electroless Nickel Electroless Palladium Immersion Gold')">🔊</button></td></tr>
+        <tr><td>Solder mask</td><td>/ˈsoʊldər mæsk/</td><td>阻焊层</td><td>覆盖铜线的绿油（或其他颜色），防止短路</td><td><button class="psb" onclick="speak('Solder mask')">🔊</button></td></tr>
+        <tr><td>Silkscreen / Legend</td><td>/ˈsɪlkskriːn/</td><td>丝印层</td><td>印刷在板面的文字和符号标注</td><td><button class="psb" onclick="speak('Silkscreen')">🔊</button></td></tr>
+        <tr><td>Copper weight</td><td>/ˈkɒpər weɪt/</td><td>铜厚</td><td>铜箔厚度，常见1oz、2oz</td><td><button class="psb" onclick="speak('Copper weight')">🔊</button></td></tr>
+        <tr><td>Board thickness</td><td>/bɔːrd ˈθɪknəs/</td><td>板厚</td><td>标准1.6mm，可定制0.4mm–3.2mm</td><td><button class="psb" onclick="speak('Board thickness')">🔊</button></td></tr>
+        <tr><td>Trace / Track</td><td>/treɪs/</td><td>走线/铜线</td><td>PCB上的铜质导线</td><td><button class="psb" onclick="speak('Trace, track')">🔊</button></td></tr>
+        <tr><td>Trace width / Space</td><td>/treɪs wɪdθ/</td><td>线宽/线距</td><td>铜线宽度及两线间距，单位mil或mm</td><td><button class="psb" onclick="speak('Trace width and space')">🔊</button></td></tr>
+        <tr><td>Via</td><td>/ˈvaɪə/</td><td>过孔</td><td>连接不同层铜箔的孔</td><td><button class="psb" onclick="speak('Via')">🔊</button></td></tr>
+        <tr><td>Through-hole via</td><td>/θruː hoʊl/</td><td>通孔</td><td>贯穿整块PCB的过孔</td><td><button class="psb" onclick="speak('Through hole via')">🔊</button></td></tr>
+        <tr><td>Blind via</td><td>/blaɪnd ˈvaɪə/</td><td>盲孔</td><td>从外层到内层但不贯穿的过孔</td><td><button class="psb" onclick="speak('Blind via')">🔊</button></td></tr>
+        <tr><td>Buried via</td><td>/ˈberiːd ˈvaɪə/</td><td>埋孔</td><td>完全在内层之间的过孔，外层看不见</td><td><button class="psb" onclick="speak('Buried via')">🔊</button></td></tr>
+        <tr><td>Microvia</td><td>/ˈmaɪkroʊˌvaɪə/</td><td>微孔</td><td>直径≤0.15mm的激光钻过孔，用于HDI</td><td><button class="psb" onclick="speak('Microvia')">🔊</button></td></tr>
+        <tr><td>HDI</td><td>/eɪtʃ diː aɪ/</td><td>高密度互连</td><td>High Density Interconnect，小孔、细线、高层数</td><td><button class="psb" onclick="speak('High Density Interconnect, HDI')">🔊</button></td></tr>
+        <tr><td>Back-drilling</td><td>/bæk ˈdrɪlɪŋ/</td><td>背钻</td><td>去除通孔残桩，改善高频信号完整性</td><td><button class="psb" onclick="speak('Back drilling')">🔊</button></td></tr>
+        <tr><td>DFM review</td><td>/diː ef em/</td><td>可制造性分析</td><td>Design for Manufacturability，生产前设计审查</td><td><button class="psb" onclick="speak('Design for Manufacturability review')">🔊</button></td></tr>
+        <tr><td>Gerber files</td><td>/ˈɡɜːrbər/</td><td>Gerber文件</td><td>PCB制造用的标准数据格式</td><td><button class="psb" onclick="speak('Gerber files')">🔊</button></td></tr>
+        <tr><td>Stack-up</td><td>/stæk ʌp/</td><td>叠层结构</td><td>多层板各层材料的排列方式</td><td><button class="psb" onclick="speak('Stack up')">🔊</button></td></tr>
+        <tr><td>AOI</td><td>/eɪ oʊ aɪ/</td><td>自动光学检测</td><td>Automated Optical Inspection，外观质量检查</td><td><button class="psb" onclick="speak('Automated Optical Inspection, AOI')">🔊</button></td></tr>
+        <tr><td>Flying probe test</td><td>/ˈflaɪɪŋ proʊb/</td><td>飞针测试</td><td>无需治具的电气性能测试</td><td><button class="psb" onclick="speak('Flying probe test')">🔊</button></td></tr>
+        <tr><td>IPC Class 2 / 3</td><td>/aɪ piː siː/</td><td>IPC二/三级</td><td>PCB质量等级标准，三级最高（航空/医疗）</td><td><button class="psb" onclick="speak('IPC Class 2 and Class 3')">🔊</button></td></tr>
+        <tr><td>RoHS</td><td>/roʊz/</td><td>环保指令</td><td>Restriction of Hazardous Substances，无铅环保要求</td><td><button class="psb" onclick="speak('RoHS')">🔊</button></td></tr>
+        <tr><td>UL certification</td><td>/juː el/</td><td>UL认证</td><td>美国安全检测实验室认证</td><td><button class="psb" onclick="speak('UL certification')">🔊</button></td></tr>
+        <tr><td>ISO 9001</td><td>/aɪ es oʊ/</td><td>ISO 9001</td><td>质量管理体系国际标准认证</td><td><button class="psb" onclick="speak('ISO 9001 certification')">🔊</button></td></tr>
+        <tr><td>Lead time</td><td>/liːd taɪm/</td><td>交货期</td><td>从下单到交货的时间</td><td><button class="psb" onclick="speak('Lead time')">🔊</button></td></tr>
+        <tr><td>MOQ</td><td>/em oʊ kjuː/</td><td>最小起订量</td><td>Minimum Order Quantity</td><td><button class="psb" onclick="speak('Minimum order quantity')">🔊</button></td></tr>
+        <tr><td>On-time delivery rate</td><td>/ɒn taɪm dɪˈlɪvəri/</td><td>准时交货率</td><td>按时交货订单占总订单的比率</td><td><button class="psb" onclick="speak('On-time delivery rate')">🔊</button></td></tr>
+        <tr><td>Express / Rush service</td><td>/ɪkˈspres/</td><td>加急服务</td><td>缩短交期的快速生产服务，通常加价</td><td><button class="psb" onclick="speak('Express rush service')">🔊</button></td></tr>
+        <tr><td>Signal integrity</td><td>/ˈsɪɡnəl ɪnˈteɡrɪti/</td><td>信号完整性</td><td>信号在传输过程中保持原始波形的能力</td><td><button class="psb" onclick="speak('Signal integrity')">🔊</button></td></tr>
+        <tr><td>Crosstalk</td><td>/ˈkrɒstɔːk/</td><td>串扰</td><td>相邻走线间的电磁干扰</td><td><button class="psb" onclick="speak('Crosstalk')">🔊</button></td></tr>
+        <tr><td>Dielectric constant (Dk)</td><td>/ˌdaɪəˈlektrɪk/</td><td>介电常数</td><td>材料对电场的响应特性，影响信号速度</td><td><button class="psb" onclick="speak('Dielectric constant')">🔊</button></td></tr>
+        <tr><td>Panelization</td><td>/ˌpænəlaɪˈzeɪʃən/</td><td>拼板</td><td>将多块小板拼合成大板进行生产</td><td><button class="psb" onclick="speak('Panelization')">🔊</button></td></tr>
+        <tr><td>V-scoring</td><td>/viː ˈskɔːrɪŋ/</td><td>V割</td><td>用V形刀槽分割拼板的方法</td><td><button class="psb" onclick="speak('V-scoring')">🔊</button></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer style="text-align:center;padding:20px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:10px;background:#fff">
+  专为PCB行业从业者设计 · 备战 Electronica Munich 2025 · 点击 🔊 收听标准英语发音
+</footer>
+
+<script>
+// Tab switching
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nt').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const tabs=['home','airport','hotel','taxi','restaurant','client','vocab'];
+  const idx=tabs.indexOf(id);
+  if(idx>=0) document.querySelectorAll('.nt')[idx].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Text-to-Speech
+let currentUtterance=null;
+function speak(text){
+  if(!('speechSynthesis' in window)){alert('您的浏览器不支持朗读功能，请使用Chrome或Safari');return;}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=0.82;u.pitch=1;
+  // Pick an English voice if available
+  const voices=speechSynthesis.getVoices();
+  const v=voices.find(v=>v.lang==='en-US'&&v.name.includes('Samantha'))||
+           voices.find(v=>v.lang==='en-US')||
+           voices.find(v=>v.lang.startsWith('en'));
+  if(v) u.voice=v;
+  speechSynthesis.speak(u);
+}
+
+// Load voices on Chrome (async)
+if(window.speechSynthesis) speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
+
+// Toggle Chinese translations in dialogue
+function toggleZh(id){
+  document.querySelectorAll('#'+id+' .dzh').forEach(el=>el.classList.toggle('show'));
+}
+
+// Play full dialogue with TTS
+function playDlg(id){
+  const lines=Array.from(document.querySelectorAll('#'+id+' .den')).map(el=>el.textContent.trim());
+  if(!('speechSynthesis' in window)||lines.length===0) return;
+  speechSynthesis.cancel();
+  let i=0;
+  function next(){
+    if(i>=lines.length) return;
+    const u=new SpeechSynthesisUtterance(lines[i++]);
+    u.lang='en-US';u.rate=0.82;
+    const voices=speechSynthesis.getVoices();
+    const v=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
+    if(v) u.voice=v;
+    u.onend=()=>setTimeout(next,600);
+    speechSynthesis.speak(u);
+  }
+  next();
+}
+
+// Glossary search
+function filterGlossary(q){
+  q=q.toLowerCase();
+  document.querySelectorAll('#gbody tr').forEach(row=>{
+    const text=row.textContent.toLowerCase();
+    row.style.display=text.includes(q)?'':'none';
+  });
+}
+</script>
+</body>
+</html>
