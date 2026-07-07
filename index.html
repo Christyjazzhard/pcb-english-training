@@ -208,6 +208,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-airport1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-airport1')">显示/隐藏中文</button>
       </div>
       <div id="dlg-airport1">
@@ -226,6 +227,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-airport2')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-airport2')">显示/隐藏中文</button>
       </div>
       <div id="dlg-airport2">
@@ -279,6 +281,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-hotel1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-hotel1')">显示/隐藏中文</button>
       </div>
       <div id="dlg-hotel1">
@@ -329,6 +332,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-taxi1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-taxi1')">显示/隐藏中文</button>
       </div>
       <div id="dlg-taxi1">
@@ -381,6 +385,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-rest1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-rest1')">显示/隐藏中文</button>
       </div>
       <div id="dlg-rest1">
@@ -473,6 +478,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-c1')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-c1')">显示/隐藏中文</button>
       </div>
       <div id="dlg-c1">
@@ -495,6 +501,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-c2')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-c2')">显示/隐藏中文</button>
       </div>
       <div id="dlg-c2">
@@ -515,6 +522,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-c3')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-c3')">显示/隐藏中文</button>
       </div>
       <div id="dlg-c3">
@@ -541,6 +549,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
     <div class="dlg">
       <div class="dlg-ctrl">
         <button class="btn btn-p" onclick="playDlg('dlg-c4')">▶ 朗读对话</button>
+        <button class="btn btn-s" onclick="stopSpeech()">■ 停止</button>
         <button class="btn btn-s" onclick="toggleZh('dlg-c4')">显示/隐藏中文</button>
       </div>
       <div id="dlg-c4">
@@ -631,7 +640,7 @@ td:nth-child(2){color:#7c3aed;font-style:italic;font-size:.77rem}
 </footer>
 
 <script>
-// Tab switching
+// ── Tab switching ──────────────────────────────────────────
 function show(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nt').forEach(t=>t.classList.remove('active'));
@@ -642,55 +651,97 @@ function show(id){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// Text-to-Speech
-let currentUtterance=null;
-function speak(text){
-  if(!('speechSynthesis' in window)){alert('您的浏览器不支持朗读功能，请使用Chrome或Safari');return;}
+// ── Voice Engine ───────────────────────────────────────────
+let voiceA=null, voiceB=null;
+
+// Priority lists — these are the most natural-sounding system voices
+const FEMALE_PREF=['Samantha','Google US English','Karen','Moira','Tessa','Victoria','Allison','Ava'];
+const MALE_PREF  =['Daniel','Google UK English Male','Alex','Tom','Aaron','Gordon','Lee','Fred'];
+
+function pickVoice(prefs, fallbackLang='en-US'){
+  const all=speechSynthesis.getVoices();
+  const en=all.filter(v=>v.lang.startsWith('en'));
+  for(const name of prefs){
+    const v=en.find(v=>v.name.includes(name));
+    if(v) return v;
+  }
+  // Prefer enhanced/premium quality if labelled
+  const enhanced=en.find(v=>/enhanced|premium|neural/i.test(v.name));
+  if(enhanced) return enhanced;
+  return en.find(v=>v.lang===fallbackLang)||en[0]||null;
+}
+
+function initVoices(){
+  voiceA=pickVoice(FEMALE_PREF,'en-US');          // Staff / customer side
+  voiceB=pickVoice(MALE_PREF,'en-GB');            // "You" / traveller side
+  // If both resolved to the same voice, try to differentiate by lang
+  if(voiceA&&voiceB&&voiceA.name===voiceB.name){
+    const all=speechSynthesis.getVoices();
+    voiceB=all.find(v=>v.lang.startsWith('en')&&v.name!==voiceA.name)||voiceA;
+  }
+}
+
+if('speechSynthesis' in window){
+  speechSynthesis.onvoiceschanged=initVoices;
+  initVoices();
+}
+
+// ── Core speak() ───────────────────────────────────────────
+function speak(text, voice=null, rate=0.92, pitch=1.0){
+  if(!('speechSynthesis' in window)){
+    alert('朗读功能需要Chrome或Safari浏览器');return;
+  }
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
-  u.lang='en-US';u.rate=0.82;u.pitch=1;
-  // Pick an English voice if available
-  const voices=speechSynthesis.getVoices();
-  const v=voices.find(v=>v.lang==='en-US'&&v.name.includes('Samantha'))||
-           voices.find(v=>v.lang==='en-US')||
-           voices.find(v=>v.lang.startsWith('en'));
-  if(v) u.voice=v;
+  u.lang='en-US'; u.rate=rate; u.pitch=pitch;
+  u.voice=voice||(voiceA||pickVoice(FEMALE_PREF));
   speechSynthesis.speak(u);
 }
 
-// Load voices on Chrome (async)
-if(window.speechSynthesis) speechSynthesis.onvoiceschanged=()=>speechSynthesis.getVoices();
+function stopSpeech(){ speechSynthesis.cancel(); }
 
-// Toggle Chinese translations in dialogue
+// ── Toggle Chinese ─────────────────────────────────────────
 function toggleZh(id){
   document.querySelectorAll('#'+id+' .dzh').forEach(el=>el.classList.toggle('show'));
 }
 
-// Play full dialogue with TTS
+// ── Play full dialogue ─────────────────────────────────────
+// Speaker A gets voiceA (female, pitch 1.08)
+// Speaker B gets voiceB (male,   pitch 0.94)
+// Pause between lines simulates natural turn-taking
 function playDlg(id){
-  const lines=Array.from(document.querySelectorAll('#'+id+' .den')).map(el=>el.textContent.trim());
-  if(!('speechSynthesis' in window)||lines.length===0) return;
+  if(!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
+
+  const lines=Array.from(document.querySelectorAll('#'+id+' .dl')).map(line=>({
+    text:(line.querySelector('.den')||{}).textContent?.trim()||'',
+    isA: !!line.querySelector('.spk-a')
+  })).filter(l=>l.text);
+
+  if(!lines.length) return;
   let i=0;
+
   function next(){
     if(i>=lines.length) return;
-    const u=new SpeechSynthesisUtterance(lines[i++]);
-    u.lang='en-US';u.rate=0.82;
-    const voices=speechSynthesis.getVoices();
-    const v=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
-    if(v) u.voice=v;
-    u.onend=()=>setTimeout(next,600);
+    const {text,isA}=lines[i++];
+    const u=new SpeechSynthesisUtterance(text);
+    u.lang='en-US';
+    u.rate=isA ? 0.91 : 0.93;        // slight rate variation feels natural
+    u.pitch=isA ? 1.08 : 0.94;       // distinct pitch per speaker
+    u.voice=isA ? (voiceA||null) : (voiceB||voiceA||null);
+    // Pause length varies: longer after longer sentences
+    const pause=Math.min(400+text.length*8, 1200);
+    u.onend=()=>setTimeout(next, pause);
     speechSynthesis.speak(u);
   }
   next();
 }
 
-// Glossary search
+// ── Glossary search ────────────────────────────────────────
 function filterGlossary(q){
   q=q.toLowerCase();
   document.querySelectorAll('#gbody tr').forEach(row=>{
-    const text=row.textContent.toLowerCase();
-    row.style.display=text.includes(q)?'':'none';
+    row.style.display=row.textContent.toLowerCase().includes(q)?'':'none';
   });
 }
 </script>
